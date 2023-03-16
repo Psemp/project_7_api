@@ -1,57 +1,41 @@
 name: CI
 
-on: [push]
+on:
+  push:
+    branches: [ staging ]
+  pull_request:
+    branches: [ staging ]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        python-version: [3.10.10]
-
-    env:
-      DB_NAME: home_credit_api
-      DB_USER: postgres
-      DB_PASSWORD: postgres
-      DB_HOST: localhost
-      DB_PORT: 5432
-      DJANGO_SETTINGS_MODULE: home_credit_api.settings.travis
-
+    services:
+      postgres:
+        image: postgres:13
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
     steps:
     - uses: actions/checkout@v2
-
-    - name: Set up Python ${{ matrix.python-version }}
+    - name: Set up Python 3.10.10
       uses: actions/setup-python@v2
       with:
-        python-version: ${{ matrix.python-version }}
-
+        python-version: 3.10.10
     - name: Install dependencies
       run: |
-        sudo apt-get update
-        sudo apt-get install postgresql postgresql-contrib
+        python -m pip install --upgrade pip
         pip install -r requirements.txt
-
-    - name: Change to app directory
-      run: cd home_credit_api
-
-    - name: Start PostgreSQL
-      run: sudo service postgresql start 13
-
-    - name: Wait for PostgreSQL to start
+    - name: Create database
       run: |
-        sudo apt-get install -y postgresql-client
-        while ! pg_isready -q -h $DB_HOST -p $DB_PORT -U $DB_USER; do sleep 1; done
-
-    - name: Create PostgreSQL database
-      run: |
-        psql -c "CREATE DATABASE $DB_NAME;" -U $DB_USER -h $DB_HOST -p $DB_PORT
-
-    - name: Run database migrations
-      run: |
-        python manage.py migrate
-
+        python manage.py migrate --noinput
     - name: Run tests
       run: |
-        python manage.py test
+        cd home_credit_api && python manage.py test
