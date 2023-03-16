@@ -1,0 +1,21 @@
+sudo: required
+
+language: python
+
+python:
+  - '3.10'
+
+before_script:
+  - pip install -r requirements.txt
+
+branches:
+  only:
+    - staging
+
+env: DJANGO_SETTINGS_MODULE="home_credit_api.settings.travis"
+
+services:
+  - postresql
+
+script:
+  - python manage.py test
