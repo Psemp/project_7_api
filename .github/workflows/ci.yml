@@ -35,7 +35,7 @@ jobs:
         pip install -r requirements.txt
     - name: Create database
       run: |
-        python manage.py migrate --noinput
+        cd home_credit_api && python manage.py migrate --noinput
     - name: Run tests
       run: |
         cd home_credit_api && python manage.py test

@@ -81,12 +81,12 @@ WSGI_APPLICATION = 'home_credit_api.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'home_credit_api',
-        'USER': 'postgres',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '',
+        'ENGINE': os.getenv(key="DB_ENGINE"),
+        'NAME': os.getenv(key="DB_NAME"),
+        'USER': os.getenv(key="DB_USER"),
+        'PASSWORD': os.getenv(key="DB_PASSWORD"),
+        'HOST': os.getenv(key="DB_HOST"),
+        'PORT': int(os.getenv(key="5432")),
     }
 }
 
