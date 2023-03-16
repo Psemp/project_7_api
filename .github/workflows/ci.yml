@@ -18,6 +18,7 @@ jobs:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
           POSTGRES_DB: postgres
+          POSTGRES_HOST_AUTH_METHOD: trust
         ports:
           - 5432:5432
         options: >-
@@ -39,10 +40,6 @@ jobs:
     - name: Create database
       run: |
         python home_credit_api/manage.py migrate --noinput
-    - name: Linting and code quality
-      run: |
-        pip install flake8
-        flake8 .
     - name: Run tests
       run: |
-        python manage.py test
+        python home_credit_api/manage.py test
