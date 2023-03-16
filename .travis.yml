@@ -6,6 +6,7 @@ python:
   - '3.9'
 
 before_script:
+  - psql -c "CREATE DATABASE home_credit_api;" -U postgres
   - pip install -r requirements.txt
 
 branches:
@@ -14,6 +15,7 @@ branches:
 
 env:
   - DJANGO_SETTINGS_MODULE="home_credit_api.settings.travis"
+  - DATABASE_URL=postgres://postgres@localhost/home_credit_api
 
 services:
   - postgresql
