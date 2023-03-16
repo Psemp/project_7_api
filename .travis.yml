@@ -3,7 +3,7 @@ sudo: required
 language: python
 
 python:
-  - '3.10-dev'
+  - '3.9'
 
 before_script:
   - psql -c "CREATE DATABASE home_credit_api;" -U postgres
@@ -17,7 +17,6 @@ branches:
 
 env:
   - DJANGO_SETTINGS_MODULE="home_credit_api.settings.travis"
-  - DATABASE_URL=postgres://postgres@localhost/home_credit_api
 
 services:
   - postgresql
