@@ -8,7 +8,7 @@ python:
 before_script:
   - psql -c "CREATE DATABASE home_credit_api;" -U postgres
   - pip install -r requirements.txt
-  - cd home_caredit_api
+  - cd home_credit_api
   - python manage.py migrate
 
 branches:
@@ -22,5 +22,5 @@ services:
   - postgresql
 
 script:
-  - cd home_caredit_api
+  - cd home_credit_api
   - python manage.py test
