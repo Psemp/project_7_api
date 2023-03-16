@@ -7,6 +7,6 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': '',
         'HOST': '',
-        'PORT': '5432',
+        'PORT': '5433',  # Postgresql 13 will run on port 5433 on travis
     },
 }
