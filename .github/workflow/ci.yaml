@@ -1,0 +1,57 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: [3.10]
+
+    env:
+      DB_NAME: home_credit_api
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      DB_HOST: localhost
+      DB_PORT: 5432
+      DJANGO_SETTINGS_MODULE: home_credit_api.settings.travis
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install postgresql postgresql-contrib
+        pip install -r requirements.txt
+
+    - name: Change to app directory
+      run: cd home_credit_api
+
+    - name: Start PostgreSQL
+      run: sudo service postgresql start 13
+
+    - name: Wait for PostgreSQL to start
+      run: |
+        sudo apt-get install -y postgresql-client
+        while ! pg_isready -q -h $DB_HOST -p $DB_PORT -U $DB_USER; do sleep 1; done
+
+    - name: Create PostgreSQL database
+      run: |
+        psql -c "CREATE DATABASE $DB_NAME;" -U $DB_USER -h $DB_HOST -p $DB_PORT
+
+    - name: Run database migrations
+      run: |
+        python manage.py migrate
+
+    - name: Run tests
+      run: |
+        python manage.py test
