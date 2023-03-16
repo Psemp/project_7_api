@@ -12,8 +12,7 @@ addons:
       - postgresql-13
 
 before_script:
-  - sudo service postgresql restart
-  - psql -c "CREATE DATABASE home_credit_api;" -U postgres
+  - psql -U postgres -p 5433 -c "CREATE DATABASE home_credit_api;"
   - pip install -r requirements.txt
 
 branches:
