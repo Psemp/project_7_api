@@ -3,17 +3,13 @@ sudo: required
 language: python
 
 python:
-  - '3.9'
+  - '3.10-dev'
 
 before_script:
-  - sudo apt-get update
-  - sudo apt-get install postgresql-13
-  - psql --version
-  - sudo service postgresql restart
+  - psql -c "CREATE DATABASE home_credit_api;" -U postgres
   - pip install -r requirements.txt
-  - cd home_credit_api
+  - cd home_caredit_api
   - python manage.py migrate
-  - cd ..
 
 branches:
   only:
@@ -21,10 +17,11 @@ branches:
 
 env:
   - DJANGO_SETTINGS_MODULE="home_credit_api.settings.travis"
+  - DATABASE_URL=postgres://postgres@localhost/home_credit_api
 
 services:
   - postgresql
 
 script:
-  - cd home_credit_api
+  - cd home_caredit_api
   - python manage.py test
