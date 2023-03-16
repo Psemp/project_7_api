@@ -18,4 +18,5 @@ services:
   - postresql
 
 script:
+  - cd home_credit_api
   - python manage.py test
