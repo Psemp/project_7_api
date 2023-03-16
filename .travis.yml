@@ -5,17 +5,8 @@ language: python
 python:
   - '3.9'
 
-addons:
-  postgresql: 13
-  apt:
-    packages:
-      - postgresql-13
-
 before_script:
-  - sudo systemctl start postgresql@13-main
-  - psql -U postgres -p 5433 -c "CREATE USER travis WITH PASSWORD 'travis';"
-  - psql -U postgres -p 5433 -c "ALTER USER travis CREATEDB;"
-  - psql -U travis -p 5433 -c "CREATE DATABASE home_credit_api;"
+  - psql -c "CREATE DATABASE home_credit_api;" -U postgres
   - pip install -r requirements.txt
 
 branches:
@@ -24,7 +15,6 @@ branches:
 
 env:
   - DJANGO_SETTINGS_MODULE="home_credit_api.settings.travis"
-  - DATABASE_URL=postgres://travis:travis@localhost:5433/home_credit_api
 
 services:
   - postgresql

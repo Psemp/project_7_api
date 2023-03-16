@@ -2,11 +2,11 @@ from . import *
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'home_credit_api',
         'USER': 'postgres',
         'PASSWORD': '',
         'HOST': '',
-        'PORT': '5433',  # psql 13 will run on this port on travis
+        'PORT': '5432',
     },
 }
