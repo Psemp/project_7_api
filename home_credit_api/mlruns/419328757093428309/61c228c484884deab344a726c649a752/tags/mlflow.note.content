@@ -1,0 +1,7 @@
+# Model Description
+
+This is a model trained using `xbgoost_calibration_run_2` on the `nans_kept_shap_reduced` version of the dataset.
+
+Class balance method used: near_miss_one
+
+<hr>

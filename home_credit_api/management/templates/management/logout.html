@@ -1,0 +1,16 @@
+{% extends 'pages/base.html' %}
+
+{% block content %}
+
+    <section class="user-section">
+        <div class="container-sm w-50 p-3 bg-light">
+            <h2>Vous avez bien été déconnecté</h2>
+                <div class="content-section">
+                    <div class="border-top pt-3">
+                        <small class="text-muted"><a class="ml-2" href="{% url 'login' %}">Se reconnecter</a></small>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock content %} 

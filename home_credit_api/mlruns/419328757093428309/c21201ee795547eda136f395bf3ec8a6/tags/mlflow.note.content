@@ -1,0 +1,7 @@
+# Model Description
+
+This is a model trained using `cb_hyperopt_best_cv` on the `nans_kept_shap_reduced` version of the dataset.
+
+Class balance method used: near_miss_one
+
+<hr>

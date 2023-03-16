@@ -1,0 +1,12 @@
+creation_timestamp: 1678196106344
+current_stage: Staging
+description: null
+last_updated_timestamp: 1678375627505
+name: cb_hyperopt_best_cv
+run_id: c21201ee795547eda136f395bf3ec8a6
+run_link: null
+source: file:///Users/psemp/Documents/GitHub/ds_p7/mlruns/419328757093428309/c21201ee795547eda136f395bf3ec8a6/artifacts/catboost-model
+status: READY
+status_message: null
+user_id: null
+version: 1

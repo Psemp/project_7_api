@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/psemp/Documents/GitHub/ds_p7/mlruns/419328757093428309/08609eb25cb44ca19695268b45cd1c7d/artifacts
+end_time: 1678191824900
+entry_point_name: ''
+experiment_id: '419328757093428309'
+lifecycle_stage: active
+run_id: 08609eb25cb44ca19695268b45cd1c7d
+run_name: xbgoost_calibration_run_3
+run_uuid: 08609eb25cb44ca19695268b45cd1c7d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1678191809787
+status: 3
+tags: []
+user_id: psemp

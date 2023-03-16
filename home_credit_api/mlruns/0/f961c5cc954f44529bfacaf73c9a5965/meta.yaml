@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/f961c5cc954f44529bfacaf73c9a5965/artifacts
+end_time: 1678698255006
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f961c5cc954f44529bfacaf73c9a5965
+run_name: enthused-owl-989
+run_uuid: f961c5cc954f44529bfacaf73c9a5965
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1678697487369
+status: 3
+tags: []
+user_id: psemp

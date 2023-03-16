@@ -1,0 +1,12 @@
+creation_timestamp: 1678196678494
+current_stage: None
+description: null
+last_updated_timestamp: 1678196678494
+name: DNN_TEST
+run_id: 32a4683c06224e8b910c14ab278ca28b
+run_link: null
+source: file:///Users/psemp/Documents/GitHub/ds_p7/mlruns/419328757093428309/32a4683c06224e8b910c14ab278ca28b/artifacts/keras-model
+status: READY
+status_message: null
+user_id: null
+version: 1

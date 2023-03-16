@@ -4,8 +4,12 @@
 # Heavy files / data files image files
 imgs/*
 data/*
+home_credit_api/data/*
 heavy/*
 private/*
+mlruns/*
+home_credit_api/notebook_test.ipynb
+home_credit_api/api/data
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
