@@ -38,7 +38,7 @@ jobs:
         pip install -r requirements.txt
     - name: Create database
       run: |
-        python manage.py migrate --noinput
+        python home_credit_api/manage.py migrate --noinput
     - name: Linting and code quality
       run: |
         pip install flake8
