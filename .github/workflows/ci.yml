@@ -1,9 +1,14 @@
-- name: Test database connection
-  run: |
-    until pg_isready -h localhost -p 5432 -U postgres; do sleep 1; done
-    psql -h localhost -p 5432 -U postgres -c 'CREATE DATABASE home_credit_api_test;'
-    psql -h localhost -p 5432 -U postgres -d home_credit_api_test -c '\q'
-
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Wait for database
+      run: |
+        until pg_isready -h localhost -p 5432 -U postgres; do sleep 1; done
+    - name: Create test database
+      run: |
+        psql -h localhost -p 5432 -U postgres -c 'CREATE DATABASE home_credit_api_test;'
+        psql -h localhost -p 5432 -U postgres -d home_credit_api_test -c '\q'
 
 # name: CI
 
