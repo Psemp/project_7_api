@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/0/bbed676a7d1e4c509ffe50d306e7b151/artifacts
+deleted_time: 1678695947630
+end_time: 1678538168131
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: bbed676a7d1e4c509ffe50d306e7b151
+run_name: carefree-rook-998
+run_uuid: bbed676a7d1e4c509ffe50d306e7b151
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1678538129508
+status: 3
+tags: []
+user_id: psemp

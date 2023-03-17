@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/psemp/Documents/GitHub/ds_p7/mlruns/419328757093428309/c21201ee795547eda136f395bf3ec8a6/artifacts
+end_time: 1678375627502
+entry_point_name: ''
+experiment_id: '419328757093428309'
+lifecycle_stage: active
+run_id: c21201ee795547eda136f395bf3ec8a6
+run_name: cb_hyperopt_best_cv
+run_uuid: c21201ee795547eda136f395bf3ec8a6
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1678196095434
+status: 3
+tags: []
+user_id: psemp

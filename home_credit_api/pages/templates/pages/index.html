@@ -1,0 +1,61 @@
+{% extends 'pages/base.html' %}
+
+{% block content %}
+{% load static %}
+{% if title %}
+<head>
+    <title>{{ title }}</title>
+</head>
+{% else %}
+<head>
+    <title>Pret a depenser</title>
+{% endif %}
+
+<!-- Header-->
+<header class="bg-dark py-5">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-6">
+                <div class="text-center my-5">
+                    <h1 class="display-5 fw-bolder text-white mb-2">Pret à dépenser c'est :</h1>
+                    <p class="lead text-white-50 mb-4">Prêt à dépenser renforce la confiance avec ses clients en développant un outil de scoring pour mieux classer les demandes de crédit et en créant s'appuyant sur la transparence vis à vis de ses clients.</p>
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                        <a class="btn btn-primary btn-lg px-4 me-sm-3" href="{% url 'about' %}">En Savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Features section-->
+<section class="py-5 border-bottom" id="features">
+    <div class="container px-5 my-5">
+        <div class="row gx-5">
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
+                <h2 class="h4 fw-bolder">Notre mission</h2>
+                <p>Nous sommes engagés à collaborer étroitement avec nos clients pour répondre à leurs besoins. Nous avons développé des outils innovants pour mieux comprendre les demandes de crédit pour travailler en transparence avec nos clients.</p>
+            </div>
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
+                <h2 class="h4 fw-bolder">Notre équipe</h2>
+                <p>Notre équipe est composée de professionnels passionnés qui sont engagés à fournir à nos clients une expérience de crédit compréhensive. Nous sommes fiers de notre engagement envers la transparence et la collaboration avec nos clients.</p>
+                <a class="text-decoration-none" href="{% url 'contact' %}">
+                    Nous Contacter
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+            <div class="col-lg-4">
+                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                <h2 class="h4 fw-bolder">Simuler mon pret</h2>
+                <p>Si vous êtes intéressé par une simulation, nous serions ravis de vous en proposer une. Veuillez nous fournir les informations nécessaires. Notre équipe de professionnels se fera un plaisir de vous fournir une simulation personnalisée qui répondra à vos besoins.</p>
+                <a class="text-decoration-none" href="{% url 'contact' %}">
+                    Simuler ma Demande
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

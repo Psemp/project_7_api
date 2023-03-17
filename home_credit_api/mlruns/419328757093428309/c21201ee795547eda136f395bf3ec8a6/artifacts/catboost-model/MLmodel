@@ -1,0 +1,19 @@
+artifact_path: catboost-model
+flavors:
+  catboost:
+    catboost_version: 1.1.1
+    code: null
+    data: model.cb
+    model_type: CatBoostClassifier
+    save_format: cbm
+  python_function:
+    data: model.cb
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.catboost
+    python_version: 3.10.4
+mlflow_version: 2.1.1
+model_uuid: abca4fdda5204fc18bae95e4ab046b55
+run_id: c21201ee795547eda136f395bf3ec8a6
+utc_time_created: '2023-03-07 13:35:04.043240'

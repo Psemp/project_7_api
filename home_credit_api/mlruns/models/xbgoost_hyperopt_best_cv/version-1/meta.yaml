@@ -1,0 +1,12 @@
+creation_timestamp: 1678195123659
+current_stage: Staging
+description: null
+last_updated_timestamp: 1678375385614
+name: xbgoost_hyperopt_best_cv
+run_id: f62231946a8f412d87a1198a731827b8
+run_link: null
+source: file:///Users/psemp/Documents/GitHub/ds_p7/mlruns/419328757093428309/f62231946a8f412d87a1198a731827b8/artifacts/xGboost-model
+status: READY
+status_message: null
+user_id: null
+version: 1

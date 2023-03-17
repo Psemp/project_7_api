@@ -1,0 +1,12 @@
+creation_timestamp: 1678188957332
+current_stage: None
+description: null
+last_updated_timestamp: 1678188957332
+name: xbgoost_calibration_run_2
+run_id: 61c228c484884deab344a726c649a752
+run_link: null
+source: file:///Users/psemp/Documents/GitHub/ds_p7/mlruns/419328757093428309/61c228c484884deab344a726c649a752/artifacts/xGboost-model
+status: READY
+status_message: null
+user_id: null
+version: 2

@@ -1,0 +1,7 @@
+# Model Description
+
+This is a model trained using `DNN_TEST` on the `Nans_imputed_scaled` version of the dataset.
+
+Class balance method used: nm1
+
+<hr>

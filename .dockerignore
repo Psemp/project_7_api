@@ -1,0 +1,10 @@
+# .dockerignore file
+.env
+imgs/*
+data/*
+home_credit_api/data/*
+heavy/*
+private/*
+mlruns/*
+home_credit_api/notebook_test.ipynb
+home_credit_api/api/data

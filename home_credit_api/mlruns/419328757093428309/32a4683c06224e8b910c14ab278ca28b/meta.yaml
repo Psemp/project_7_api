@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/psemp/Documents/GitHub/ds_p7/mlruns/419328757093428309/32a4683c06224e8b910c14ab278ca28b/artifacts
+end_time: 1678196678633
+entry_point_name: ''
+experiment_id: '419328757093428309'
+lifecycle_stage: active
+run_id: 32a4683c06224e8b910c14ab278ca28b
+run_name: DNN
+run_uuid: 32a4683c06224e8b910c14ab278ca28b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1678196231207
+status: 1
+tags: []
+user_id: psemp
