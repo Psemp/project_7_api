@@ -13,7 +13,7 @@ RUN python3 -m pip install --upgrade pip setuptools wheel
 # Set up Django app
 RUN mkdir /app
 WORKDIR /app
-RUN git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git /app/
+RUN git clone https://github.com/Psemp/project_7_api.git /app/
 RUN pip install -r requirements.txt
 RUN python3 manage.py collectstatic --noinput
 

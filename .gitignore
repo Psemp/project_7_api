@@ -3,6 +3,7 @@
 
 # Heavy files / data files image files
 imgs/*
+data
 data/*
 home_credit_api/data/*
 heavy/*
