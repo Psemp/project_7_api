@@ -85,8 +85,8 @@ def model_overview():
     st.write("\n")
 
     # path to plots
-    auc_conf_plot_path = f"media/{model_dict[selected_model][1]}"
-    shap_plot_path = f"media/{model_dict[selected_model][2]}"
+    auc_conf_plot_path = model_dict[selected_model][1]
+    shap_plot_path = model_dict[selected_model][2]
 
     # hide with expander
     with st.expander("Feature importance Summary"):
@@ -212,7 +212,12 @@ def get_models():
     models = {}
     for result in results:
         # model name = metrics, auc_conf_image, shap_plot, identifier
-        models[result[0]] = result[1], result[2], result[3], result[4]
+        model_name = result[0]
+        metrics = result[1]
+        auc_conf_image_path = os.path.abspath(result[2])
+        shap_plot_path = os.path.abspath(result[3])
+        identifier = result[4]
+        models[model_name] = (metrics, auc_conf_image_path, shap_plot_path, identifier)
 
     return models
 
