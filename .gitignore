@@ -2,7 +2,6 @@
 .DS_Store
 
 # Heavy files / data files image files
-home_credit_api/api/management/commands/read_folder.py
 home_credit_api/classifier.pkl
 home_credit_api/plots/
 home_credit_api/shap_values.pkl
