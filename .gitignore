@@ -2,6 +2,14 @@
 .DS_Store
 
 # Heavy files / data files image files
+home_credit_api/classifier.pkl
+home_credit_api/plots/
+home_credit_api/shap_values.pkl
+home_credit_api/xgb_model.pkl
+
+# Production data :
+home_credit_api/dashboard/templates/dashboard/dashboard.html
+
 imgs/*
 data
 data/*
