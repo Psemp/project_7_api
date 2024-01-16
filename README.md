@@ -19,7 +19,7 @@
 	- `host:port/api/predict/?client_id=<client_id>&model_id=<model_id>` : returns a prediction of the client defined by its id using a model defined by its idea. Shape of response if 200 : Base 100 score, local SHAP values, name of the variables
 
 # 4 : Currently deployed at :
-[51.159.155.177:80](http://51.159.155.177/)
+~~[51.159.155.177:80](http://51.159.155.177/)~~
 
 # 5 : CI/CD managed by github actions
 - Using Django build in test command to test routes and database actions
